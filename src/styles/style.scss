@@ -1,0 +1,78 @@
+$color-black: #5b5b5b;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #fff;
+  &__copy {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+
+.parallax {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  @for $i from 1 through 3 {
+    &#{$i} {
+      background-image: url('../images/photo#{$i}.jpg');
+    }
+  }
+  &__container {
+    position: relative;
+    width: 960px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  &__heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 100%;
+  }
+}
+
+.content {
+  &__container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__heading {
+    font-size: 32px;
+    text-align: center;
+    color: $color-black;
+  }
+  &__p {
+    margin-bottom: 2em;
+    font-size: 18px;
+    color: $color-black;
+  }
+}
+
+.footer {
+  padding: 30px 0;
+  background-color: #a7a7a7;
+  &__copy {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+  }
+}
